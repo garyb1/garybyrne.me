@@ -1,18 +1,13 @@
-# Logs
-logs
-*.log
-npm-debug.log*
+# Node modules
+node_modules
 
-# Dependencies
-node_modules/
-package-lock.json
+# generated files
+dist
+src/_includes/css
+src/_includes/scripts
 
-# Eleventy
-_site/
+# cache
+.cache
 
-# Misc
-.DS_Store
+# secret data
 .env
-
-# Local Netlify folder
-.netlify

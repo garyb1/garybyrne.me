@@ -1,54 +1,73 @@
 {
   "name": "garybyrne.me",
-  "version": "1.2.0",
-  "description": "A personal website for Gary Byrne",
-  "browserslist": [
-    "> 0.5%",
-    "not IE 11"
-  ],
-  "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "watch": "npx @11ty/eleventy --watch",
-    "serve": "npx @11ty/eleventy --serve",
-    "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "build": "npx @11ty/eleventy",
-    "clean": "del-cli _site",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "3.1.1",
+  "description": "Personal Website for Gary Byrne",
+  "author": "Gary Byrne",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=20.x.x"
   },
+  "scripts": {
+    "clean": "rimraf dist src/_includes/css src/_includes/scripts",
+    "favicons": "node ./src/_config/setup/generate-favicons.js",
+    "screenshots": "node ./src/_config/setup/generate-screenshots.js",
+    "dev:11ty": "cross-env ELEVENTY_ENV=development eleventy --serve --watch",
+    "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
+    "start": "run-p dev:*",
+    "build": "run-s clean build:*"
+  },
+  "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/garyb1/garybyrne.me.git"
+    "url": "https://github.com/garyb1/garybyrne.me.git"
   },
-  "author": "Gary Byrne",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/garyb1/garybyrne.me/issues"
-  },
-  "homepage": "https://github.com/garyb1/garybyrne.me#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+  "dependencies": {
+    "@11ty/eleventy": "3.0.0-alpha.10",
+    "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^4.0.2",
-    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@11ty/eleventy-plugin-vite": "^4.0.0",
-    "autoprefixer": "^10.4.16",
-    "cssnano": "^6.0.1",
-    "cssremedy": "^0.1.0-beta.2",
-    "del-cli": "^5.1.0",
-    "eslint": "^8.54.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^16.3.1",
-    "eslint-plugin-promise": "^6.0.0",
-    "focus-visible": "^5.2.0",
-    "luxon": "^3.4.4",
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "@11ty/is-land": "^4.0.0",
+    "lite-youtube-embed": "^0.3.2",
+    "tailwindcss": "^3.0.23"
+  },
+  "devDependencies": {
+    "@toycode/markdown-it-class": "^1.2.4",
+    "autoprefixer": "^10.4.13",
+    "clean-css": "^5.3.3",
+    "cross-env": "^7.0.3",
+    "cssnano": "^7.0.1",
+    "dayjs": "^1.11.5",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.21.4",
+    "html-minifier-terser": "^7.1.0",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
     "markdown-it": "^14.0.0",
-    "markdown-it-anchor": "^8.6.7",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-anchor": "^9.0.1",
+    "markdown-it-eleventy-img": "^0.10.2",
+    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-link-attributes": "^4.0.1",
+    "markdown-it-mark": "^4.0.0",
+    "markdown-it-prism": "^2.3.0",
+    "netlify-plugin-cache": "^1.0.3",
     "npm-run-all": "^4.1.5",
-    "postcss-nesting": "^12.0.1",
-    "rollup-plugin-critical": "^1.0.13",
-    "sass": "^1.69.5",
-    "vite": "^5.1.5"
+    "postcss": "^8.4.8",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.0",
+    "postcss-import-ext-glob": "^2.0.1",
+    "postcss-js": "^4.0.0",
+    "prettier-plugin-jinja-template": "^1.3.2",
+    "rimraf": "^5.0.0",
+    "sanitize-html": "^2.7.2",
+    "sharp": "^0.33.4",
+    "sharp-ico": "^0.1.5",
+    "slugify": "^1.6.5",
+    "svgo": "^3.2.0"
   }
 }
