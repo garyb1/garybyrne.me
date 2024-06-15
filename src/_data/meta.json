@@ -1,8 +1,8 @@
 {
-    "title": "Eleventy Plus Vite",
-    "description": "An Eleventy 2 Starter Project with Vite",
-    "url": "https://eleventyplusvite.netlify.app",
+    "title": "Gary Byrne",
+    "description": "Gary Byrne Personal Website",
+    "url": "https://garybyrne.me",
     "lang": "en",
-    "locale": "en_us",
-    "author": "Matthias Ott"
+    "locale": "en_ie",
+    "author": "Gary Byrne"
 }

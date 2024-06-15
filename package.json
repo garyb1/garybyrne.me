@@ -1,7 +1,7 @@
 {
-  "name": "eleventy-plus-vite",
+  "name": "garybyrne.me",
   "version": "1.2.0",
-  "description": "A clean and simple Eleventy 2 Starter Kit with Vite",
+  "description": "A personal website for Gary Byrne",
   "browserslist": [
     "> 0.5%",
     "not IE 11"
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://matthiasott@github.com/matthiasott/11ty22.git"
+    "url": "git+https://github.com/garyb1/garybyrne.me.git"
   },
-  "author": "Matthias Ott",
+  "author": "Gary Byrne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matthiasott/11ty22/issues"
+    "url": "https://github.com/garyb1/garybyrne.me/issues"
   },
-  "homepage": "https://github.com/matthiasott/11ty22#readme",
+  "homepage": "https://github.com/garyb1/garybyrne.me#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^4.0.2",
