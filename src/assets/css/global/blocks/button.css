@@ -21,6 +21,10 @@
   --button-border: var(--color-text);
 }
 
+.button__icon {
+  fill: var(--button-text);
+}
+
 .button:active {
   transform: scale(99%);
 }

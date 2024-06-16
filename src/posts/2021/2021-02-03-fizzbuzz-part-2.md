@@ -23,10 +23,6 @@ ol
 +fizzbuzz(1, 100)
 ```
 
-Here's a reworded version:
-
----
-
 Here, we use an [ordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol) which displays numbered elements. By rendering 100 list items within this ordered list, we automatically generate the sequential numbers. While this approach lacks semantic meaning, it demonstrates how we can achieve this conceptually.
 
 Within this ordered list, we adjust the [list-style-position](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position) of each list item to `inside`. This aligns the content inside the list item, ensuring proper formatting. Additionally, we remove the numbering by setting the list style to none for items that require plain text.
@@ -52,4 +48,4 @@ li:nth-child(5n)::after {
 
 Here is the final codepen solution: 
 
-{% codepen "https://codepen.io/garyb1/pen/LYbpRbG" %}
+{% postToCodepen "Final Solution", "https://codepen.io/garyb1/pen/LYbpRbG", css, html %}

@@ -99,7 +99,7 @@ Notice how even the divs that are multiples of 5 but not multiples of 3 still di
 
 Here is a working example in codepen:
 
-{% codepen 'https://codepen.io/garyb1/pen/zYovrVB' %}
+{% postToCodepen "Step 1, Printing", "https://codepen.io/garyb1/pen/zYovrVB", css, html %}
 
 ### Refactoring our Pug
 
@@ -114,7 +114,8 @@ mixin fizzbuzz(min, max)
 ```
 
 Here is a working codepen example:
-{% codepen "https://codepen.io/garyb1/pen/RwoWRNz" %}
+
+{% postToCodepen "Final Solution", "https://codepen.io/garyb1/pen/RwoWRNz", css, html %}
 
 ### Browser Support
 

@@ -45,11 +45,14 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(plugins.htmlConfig);
   eleventyConfig.addPlugin(plugins.cssConfig);
   eleventyConfig.addPlugin(plugins.jsConfig);
-
   eleventyConfig.addPlugin(plugins.EleventyRenderPlugin);
   eleventyConfig.addPlugin(plugins.rss);
   eleventyConfig.addPlugin(plugins.syntaxHighlight);
-  eleventyConfig.addPlugin(plugins.codepenEmbed);
+  eleventyConfig.addPlugin(plugins.openInCodepen, {
+    siteUrl: "garybyrne.me",
+    buttonClass: "button",
+    buttonIconClass: "button__icon"
+  });
 
   eleventyConfig.addPlugin(plugins.webc, {
     components: ['./src/_includes/webc/*.webc'],
