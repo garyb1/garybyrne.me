@@ -20,6 +20,7 @@ import yaml from 'js-yaml';
 //  config import
 import {getAllPosts, onlyMarkdown, tagList} from './src/_config/collections.js';
 import filters from './src/_config/filters.js';
+import events from './src/_config/events.js';
 import plugins from './src/_config/plugins.js';
 import shortcodes from './src/_config/shortcodes.js';
 
@@ -30,6 +31,9 @@ export default async function (eleventyConfig) {
   // --------------------- layout aliases
   eleventyConfig.addLayoutAlias('base', 'base.njk');
   eleventyConfig.addLayoutAlias('home', 'home.njk');
+  eleventyConfig.addLayoutAlias('page', 'page.njk');
+  eleventyConfig.addLayoutAlias('blog', 'blog.njk');
+  eleventyConfig.addLayoutAlias('post', 'post.njk');
   eleventyConfig.addLayoutAlias('tags', 'tags.njk');
 
   //	---------------------  Collections
@@ -45,6 +49,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(plugins.EleventyRenderPlugin);
   eleventyConfig.addPlugin(plugins.rss);
   eleventyConfig.addPlugin(plugins.syntaxHighlight);
+  eleventyConfig.addPlugin(plugins.codepenEmbed);
 
   eleventyConfig.addPlugin(plugins.webc, {
     components: ['./src/_includes/webc/*.webc'],
@@ -88,6 +93,11 @@ export default async function (eleventyConfig) {
     // -- node_modules
     'node_modules/lite-youtube-embed/src/lite-yt-embed.{css,js}': `assets/components/`
   });
+
+    // --------------------- Events ---------------------
+    if (process.env.ELEVENTY_RUN_MODE === 'serve') {
+      eleventyConfig.on('eleventy.after', events.svgToJpeg);
+    }
 
   // --------------------- Build Settings
   eleventyConfig.setDataDeepMerge(true);

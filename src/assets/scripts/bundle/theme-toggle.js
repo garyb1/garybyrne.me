@@ -61,7 +61,7 @@ function reflectPreference() {
   // adjust the theme color
   document
     .querySelector('meta[name="theme-color"]')
-    .setAttribute('content', theme.value === 'dark' ? themeColors.dark : themeColors.light);
+    ?.setAttribute('content', theme.value === 'dark' ? themeColors.dark : themeColors.light);
 }
 
 // set early so no page flashes / CSS is made aware

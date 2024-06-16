@@ -45,11 +45,13 @@
   <body class="{{ layout }}">
     {% include "partials/header.njk" %}
 
-    <main id="main" class="flow">{{ content | safe }}</main>
+    <main id="main" class="flow" tabindex="-1">{{ content | safe }}</main>
 
     {% include "partials/footer.njk" %}
 
     <script type="module" src="/assets/scripts/components/custom-easteregg.js"></script>
     <custom-easteregg></custom-easteregg>
+
+    {% codepen_js %}
   </body>
 </html>
