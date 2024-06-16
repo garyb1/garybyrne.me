@@ -20,6 +20,14 @@ export const creator = {
   social: 'https://x.com/garybyrne1_'
 };
 
+feedLinks: [
+  {
+    title: 'Atom Feed',
+    url: '/feed.xml',
+    type: 'application/atom+xml'
+  }
+],
+
 export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon generation
 export const themeColor = '#DD4462'; //  Manifest: defines the default theme color for the application
 export const themeBgColor = '#FBFBFB'; // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded
