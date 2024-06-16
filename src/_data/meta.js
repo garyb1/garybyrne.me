@@ -20,20 +20,35 @@ export const creator = {
   social: 'https://x.com/garybyrne1_'
 };
 
-feedLinks: [
-  {
-    title: 'Atom Feed',
-    url: '/feed.xml',
-    type: 'application/atom+xml'
-  }
-],
-
 export const pathToSvgLogo = 'src/assets/svg/misc/logo.svg'; // used for favicon generation
 export const themeColor = '#DD4462'; //  Manifest: defines the default theme color for the application
 export const themeBgColor = '#FBFBFB'; // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded
 export const opengraph_default = '/assets/images/template/opengraph-default.jpg'; // fallback/default meta image
 export const opengraph_default_alt =
   "Visible content: A personal website for Gary Byrne"; // alt text for default meta image"
+
+  export const blog = {
+    // RSS feed
+    name: 'Gary Byrne Frontend Accessibility Blog',
+    description: 'Mainly focusing on web accessibility alongside other creative CSS subjects',
+    feedLinks: [
+      {
+        title: 'Atom Feed',
+        url: '/feed.xml',
+        type: 'application/atom+xml'
+      }
+    ],
+    // Tags
+    tagSingle: 'Tag',
+    tagPlural: 'Tags',
+    tagMore: 'More tags:',
+    // pagination
+    paginationLabel: 'Blog',
+    paginationPage: 'Page',
+    paginationPrevious: 'Previous',
+    paginationNext: 'Next',
+    paginationNumbers: true
+  };
 
 export const details = {
   aria: 'section controls',
