@@ -22,8 +22,6 @@
 .site-footer .creator {
   font-size: var(--size-step-min-1);
   margin-block-start: var(--space-m);
-  display: grid;
-  place-items: center;
 }
 
 .site-footer .creator a {

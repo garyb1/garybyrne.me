@@ -3,6 +3,7 @@ import {EleventyRenderPlugin} from '@11ty/eleventy';
 import rss from '@11ty/eleventy-plugin-rss';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import webc from '@11ty/eleventy-plugin-webc';
+import codepenEmbed from "@kevingimbel/eleventy-plugin-codepen";
 
 // custom
 import {markdownLib} from './plugins/markdown.js';
@@ -22,5 +23,6 @@ export default {
   markdownLib,
   htmlConfig,
   cssConfig,
-  jsConfig
+  jsConfig,
+  codepenEmbed
 };

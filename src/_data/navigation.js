@@ -1,5 +1,10 @@
 export default {
-  top: [],
+  top: [
+    {
+      text: 'Blog',
+      url: '/blog/'
+    }
+  ],
   bottom: [
     {
       text: 'Style guide',
